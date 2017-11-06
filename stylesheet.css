@@ -4,7 +4,7 @@
      }
 
      * {
-         font-family: Helvetica, Arial, Verdana, Geneva, Tahoma, sans-serif sans-serif;
+         font-family: "Helvetica, Arial, Verdana, Geneva, Tahoma, sans-serif";
          transition: all 0.4s;
          font-size: 18px;
      }
@@ -141,8 +141,6 @@
      }
 
      .card input {
-         /* margin-bottom: 5%;
-    margin-top: 10%; */
          background-color: inherit;
          border: 0px;
          border-bottom: 1px solid grey;
@@ -305,13 +303,43 @@
          box-shadow: inset 9px 10px 0px 200px rgba(230, 230, 230, 0.49);
      }
 
-   
+     @media screen and (min-width: 0px) and (max-width: 445px) {
+         .body {
+             border-left: 0px;
+             border-right: 0px;
+         }
+         .information {
+             width: 100%;
+             display: block;
+             height: auto;
+             padding-left: 10%;
+         }
+         .contacts {
+             display: flex;
+             flex-direction: column;
+             height: auto;
+             padding-right: 15px;
+             font-size: 150%;
+         }
+         .company_information {
+             display: block;
+             height: auto;
+             font-size: 18px;
+             padding-bottom: 10px;
+             padding-left: 1%;
+         }
+         .logo {
+             width: 100%;
+             height: auto;
+             max-height: 200px;
+         }
+     }
 
-     @media screen and (min-width:445px) and (max-width: 650px) {
-        .body {
-            border-left: 0px;
-            border-right: 0px;
-        }
+     @media screen and (min-width:0px) and (max-width: 650px) {
+         .body {
+             border-left: 0px;
+             border-right: 0px;
+         }
          .information {
              display: block;
              height: auto;
@@ -341,41 +369,10 @@
              max-height: 200px;
          }
      }
-     @media screen and (min-width:650px) and (max-width:768px) {
-        .body {
-            border-left: 0px;
-            border-right: 0px;
-        }
-    }
-     @media screen and (min-width: 0px) and (max-width: 445px) {
-        .body {
-            border-left: 0px;
-            border-right: 0px;
-        }
-         .information {
-             width: 100%;
-             display: block;
-             height: auto;
-             padding-left: 10%;
-         }
-         .contacts {
-            display: flex;
-            flex-direction: column;
-            height: auto;
-            padding-right: 15px;
-            font-size: 150%;
-        }
-         .company_name {}
-         .company_information {
-             display: block;
-             height: auto;
-             font-size: 18px;
-             padding-bottom: 10px;
-             padding-left: 1%;
-         }
-         .logo {
-             width: 100%;
-             height: auto;
-             max-height: 200px;
+
+     @media screen and (min-width:0px) and (max-width:768px) {
+         .body {
+             border-left: 0px;
+             border-right: 0px;
          }
      }
