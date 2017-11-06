@@ -1,310 +1,381 @@
- .border {
-     border-radius: 0px 0px 5% 5%;
-     border-bottom: 2px solid rgb(156, 156, 156);
- }
+     .border {
+         border-radius: 0px 0px 5% 5%;
+         border-bottom: 2px solid rgb(156, 156, 156);
+     }
 
- * {
-     font-family: Helvetica, Arial, Verdana, Geneva, Tahoma, sans-serif sans-serif;
-     transition: all 0.4s;
-     font-size: 18px;
- }
+     * {
+         font-family: Helvetica, Arial, Verdana, Geneva, Tahoma, sans-serif sans-serif;
+         transition: all 0.4s;
+         font-size: 18px;
+     }
 
- body {
-     margin-left: auto;
-     margin-right: auto;
-     border-left: 1px solid rgb(95, 83, 83);
-     border-right: 1px solid rgb(95, 83, 83);
-     padding: 1px;
-     min-height: 100vh;
-     max-width: 768px;
- }
+     body {
+         margin-left: auto;
+         margin-right: auto;
+         border-left: 1px solid rgb(95, 83, 83);
+         border-right: 1px solid rgb(95, 83, 83);
+         padding: 1px;
+         min-height: 100vh;
+         max-width: 768px;
+     }
 
- .content {
-     display: flex;
-     flex-direction: column;
-     margin-left: 2%;
-     margin-right: 2%;
- }
+     .content {
+         display: flex;
+         flex-direction: column;
+         margin-left: 2%;
+         margin-right: 2%;
+     }
 
- .company_name {
-     display: flex;
-     flex-direction: row;
- }
+     .company_name {
+         display: flex;
+         flex-direction: row;
+     }
 
- .company_information {
-     display: flex;
-     flex: 7;
-     height: auto;
-     font-size: 18px;
-     padding-bottom: 10px;
-     padding-left: 1%;
- }
+     .company_information {
+         display: flex;
+         height: auto;
+         font-size: 18px;
+         padding-bottom: 10px;
+         padding-left: 1%;
+     }
 
- .information {
-     display: block;
-     width: 70%;
-     height: auto;
-     padding-left: 10px;
- }
+     .information {
+         display: block;
+         width: 70%;
+         height: auto;
+         padding-left: 10px;
+     }
 
- .contacts {
-     flex: 7;
-     height: auto;
-     padding-right: 15px;
-     font-size: 150%;
- }
+     .contacts {
+         height: auto;
+         padding-right: 15px;
+         font-size: 150%;
+     }
 
- .contacts div {
-     display: inline-block;
-     height: auto;
-     padding-left: 10px;
-     margin-bottom: 5%;
- }
+     .contacts div {
+         display: inline-block;
+         height: auto;
+         padding-left: 10px;
+         margin-bottom: 5%;
+     }
 
- .logo {
-     display: flex;
-     justify-content: center;
-     align-items: center;
-     width: 30%;
-     height: auto;
-     max-height: 200px;
-     flex: 3;
- }
+     .logo {
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         width: 30%;
+         height: auto;
+         max-height: 200px;
+         flex: 3;
+     }
 
- .logo img {
-     max-width: 200px;
-     max-height: 200px;
- }
+     .logo img {
+         max-width: 200px;
+         max-height: 200px;
+     }
 
- .phoneNumber {
-     color: grey;
- }
+     .phoneNumber {
+         color: grey;
+     }
 
- .payment {
-     position: relative;
- }
+     .payment {
+         position: relative;
+     }
 
- a {
-     color: rgb(77, 77, 252);
- }
+     a {
+         color: rgb(77, 77, 252);
+     }
 
- a:link,
- a:visited {
-     color: rgb(77, 77, 252);
- }
+     a:link,
+     a:visited {
+         color: rgb(77, 77, 252);
+     }
 
- button {
-     border: 0px;
-     background: inherit;
-     color: rgb(77, 77, 252);
- }
+     button {
+         border: 0px;
+         background: inherit;
+         color: rgb(77, 77, 252);
+     }
 
- button:hover {
-     color: black;
-     background-color: rgb(190, 246, 247);
- }
+     button:hover {
+         color: black;
+         background-color: rgb(190, 246, 247);
+     }
 
- .action_type_button {
-     font-weight: bold;
-     font-size: 130%;
-     margin-top: 1%;
-     font-size: 15px;
-     margin-right: 10%;
- }
+     .action_type_button {
+         font-weight: bold;
+         font-size: 130%;
+         margin-top: 1%;
+         font-size: 15px;
+         margin-right: 10%;
+     }
 
- .payment_type_button {
-     font-size: 15px;
-     margin: 5%;
- }
+     .payment_type_button {
+         font-size: 15px;
+         margin: 5%;
+     }
 
- .payment_information {
-     margin: 3%;
-     display: flex;
-     flex-direction: row;
- }
+     .payment_information {
+         margin: 3%;
+         display: flex;
+         flex-direction: row;
+     }
 
- .card {
-     background-color: rgb(190, 246, 247);
-     box-shadow: 3px 5px 39px -6px rgba(138, 138, 138, 1);
-     min-width: 20%;
-     width: 276px;
-     height: 170px;
-     max-width: 300px;
-     border-radius: 20px;
-     padding: 2% 5% 2% 5%;
-     display: flex;
-     flex-direction: column;
-     justify-content: space-around;
- }
+     .card {
+         background-color: rgb(190, 246, 247);
+         box-shadow: 3px 5px 39px -6px rgba(138, 138, 138, 1);
+         min-width: 20%;
+         width: 276px;
+         height: 170px;
+         max-width: 300px;
+         border-radius: 20px;
+         padding: 2% 5% 2% 5%;
+         display: flex;
+         flex-direction: column;
+         justify-content: space-around;
+     }
 
- .payImg {
-     width: 50%;
-     margin-left: 60%;
- }
+     .payImg {
+         width: 50%;
+         margin-left: 60%;
+     }
 
- .card input {
-     /* margin-bottom: 5%;
+     .card input {
+         /* margin-bottom: 5%;
     margin-top: 10%; */
-     background-color: inherit;
-     border: 0px;
-     border-bottom: 1px solid grey;
- }
+         background-color: inherit;
+         border: 0px;
+         border-bottom: 1px solid grey;
+     }
 
- .card_wrapper {
-     display: flex;
-     justify-content: space-between;
- }
+     .card_wrapper {
+         display: flex;
+         justify-content: space-between;
+     }
 
- .card_wrapper input {
-     text-align: center;
-     width: 30%;
-     max-width: 70px;
-     margin-right: 20%;
- }
+     .card_wrapper input {
+         text-align: center;
+         width: 30%;
+         max-width: 70px;
+         margin-right: 20%;
+     }
 
- .payinfo {
-     margin-left: 5%;
-     display: flex;
-     flex-direction: column;
-     justify-content: space-around;
- }
+     .payinfo {
+         margin-left: 5%;
+         display: flex;
+         flex-direction: column;
+         justify-content: space-around;
+     }
 
- .pay_button {
-     margin-left: 0px;
-     height: 40px;
-     background-image: url(images/pay_batton_background.png);
-     border: 1px solid gray;
- }
+     .pay_button {
+         margin-left: 0px;
+         height: 40px;
+         background-image: url(images/pay_batton_background.png);
+         border: 1px solid gray;
+     }
 
- .info {
-     display: flex;
-     justify-content: space-between;
-     margin: 4%;
-     font-weight: bold;
-     width: 100%;
-     margin-top: 0%;
- }
+     .info {
+         display: flex;
+         justify-content: space-between;
+         margin: 4%;
+         font-weight: bold;
+         width: 100%;
+         margin-top: 0%;
+     }
 
- .info span {
-     justify-content: flex-end;
- }
+     .info span {
+         justify-content: flex-end;
+     }
 
- .info span {
-     width: 80%;
- }
+     .info span {
+         width: 80%;
+     }
 
- .info input {
-     width: 100%;
-     margin-left: 10%;
-     margin-right: 10%;
-     border: 0px;
-     border-bottom: 1px solid grey;
- }
+     .info input {
+         width: 100%;
+         margin-left: 10%;
+         margin-right: 10%;
+         border: 0px;
+         border-bottom: 1px solid grey;
+     }
 
- .сompany_services {
-     display: flex;
-     flex-direction: column;
-     justify-content: space-between;
-     border-bottom: uns
- }
+     .сompany_services {
+         display: flex;
+         flex-direction: column;
+         justify-content: space-between;
+         border-bottom: uns
+     }
 
- .services {
-     display: flex;
-     justify-content: space-around;
- }
+     .services {
+         display: flex;
+         justify-content: space-around;
+     }
 
- .services div {
-     border: 1px solid lightgray;
-     display: flex;
-     flex-direction: column;
-     justify-content: space-around;
-     width: 30%;
-     text-align: center;
- }
+     .services div {
+         border: 1px solid lightgray;
+         display: flex;
+         flex-direction: column;
+         justify-content: space-around;
+         width: 30%;
+         text-align: center;
+     }
 
- .bold {
-     font-weight: bold;
- }
+     .bold {
+         font-weight: bold;
+     }
 
- .curse {
-     font-style: italic;
- }
+     .curse {
+         font-style: italic;
+     }
 
- .services img {
-     padding: 5% 15% 5% 15%;
-     width: 70%;
-     height: auto;
- }
+     .services img {
+         padding: 5% 15% 5% 15%;
+         width: 70%;
+         height: auto;
+     }
 
- .services span {
-     margin-top: 5%;
- }
+     .services span {
+         margin-top: 5%;
+     }
 
- .description {}
+     .description {}
 
- .text {
-     margin-bottom: 0px;
- }
+     .text {
+         margin-bottom: 0px;
+     }
 
- .full_text_button {
-     margin-top: 0;
-     margin-bottom: 3%;
- }
+     .full_text_button {
+         margin-top: 0;
+         margin-bottom: 3%;
+     }
 
- .full_text_button:hover {
-     background-color: inherit;
- }
+     .full_text_button:hover {
+         background-color: inherit;
+     }
 
- ul {
-    list-style-type: none;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
+     ul {
+         list-style-type: none;
+         display: flex;
+         flex-wrap: wrap;
+         justify-content: center;
+     }
 
-ul li {
-    margin-right: 15px;
-}
+     ul li {
+         margin-right: 15px;
+     }
 
-ul li a {
-    display: flex;
-    width: 38px;
-    height: 38px;
-    /* margin-bottom: 20px; */
-}
+     ul li a {
+         display: flex;
+         width: 38px;
+         height: 38px;
+         /* margin-bottom: 20px; */
+     }
 
+     .facebook {
+         background-image: url('images/social_icons.png');
+         background-position: -106px 0px;
+         background-size: 300px;
+     }
 
- .facebook {
-     background-image: url('images/social_icons.png');
-     background-position: -106px 0px;
-     background-size: 300px;
- }
+     .twitter {
+         background-image: url('images/social_icons.png');
+         background-position: -158px 0px;
+         background-size: 300px;
+     }
 
- .twitter {
-     background-image: url('images/social_icons.png');
-     background-position: -158px 0px;
-     background-size: 300px;
- }
+     .vk {
+         background-image: url('images/social_icons.png');
+         background-position: -158pxpx 0px;
+         background-size: 300px;
+     }
 
- .vk {
-     background-image: url('images/social_icons.png');
-     background-position: -158pxpx 0px;
-     background-size: 300px;
- }
+     .google {
+         background-image: url('images/social_icons.png');
+         background-position: -210px -0px;
+         background-size: 300px;
+     }
 
- .google {
-     background-image: url('images/social_icons.png');
-     background-position: -210px -0px;
-     background-size: 300px;
- }
+     .telegram {
+         background-image: url('images/social_icons.png');
+         background-position: -106px -157px;
+         background-size: 300px;
+     }
 
- .telegram {
-     background-image: url('images/social_icons.png');
-     background-position: -106px -157px;
-     background-size: 300px;
- }
- .social:hover{
-    box-shadow: inset 9px 10px 0px 200px rgba(230,230,230,0.49);
-}
+     .social:hover {
+         box-shadow: inset 9px 10px 0px 200px rgba(230, 230, 230, 0.49);
+     }
 
+   
 
+     @media screen and (min-width:445px) and (max-width: 650px) {
+        .body {
+            border-left: 0px;
+            border-right: 0px;
+        }
+         .information {
+             display: block;
+             height: auto;
+             padding-left: 10px;
+         }
+         .company_name {
+             width: 100%;
+             display: flex;
+             flex-direction: row;
+         }
+         .company_information {
+             height: auto;
+             font-size: 18px;
+             padding-bottom: 10px;
+             padding-left: 1%;
+         }
+         .contacts {
+             display: flex;
+             flex-direction: column;
+             height: auto;
+             padding-right: 15px;
+             font-size: 150%;
+         }
+         .logo {
+             width: 100%;
+             height: auto;
+             max-height: 200px;
+         }
+     }
+     @media screen and (min-width:650px) and (max-width:768px) {
+        .body {
+            border-left: 0px;
+            border-right: 0px;
+        }
+    }
+     @media screen and (min-width: 0px) and (max-width: 445px) {
+        .body {
+            border-left: 0px;
+            border-right: 0px;
+        }
+         .information {
+             width: 100%;
+             display: block;
+             height: auto;
+             padding-left: 10%;
+         }
+         .contacts {
+            display: flex;
+            flex-direction: column;
+            height: auto;
+            padding-right: 15px;
+            font-size: 150%;
+        }
+         .company_name {}
+         .company_information {
+             display: block;
+             height: auto;
+             font-size: 18px;
+             padding-bottom: 10px;
+             padding-left: 1%;
+         }
+         .logo {
+             width: 100%;
+             height: auto;
+             max-height: 200px;
+         }
+     }
