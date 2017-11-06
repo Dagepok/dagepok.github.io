@@ -108,6 +108,7 @@
          margin-top: 1%;
          font-size: 15px;
          margin-right: 10%;
+         padding-left: 10%;
      }
 
      .payment_type_button {
@@ -235,9 +236,6 @@
      .services span {
          margin-top: 5%;
      }
-
-     .description {}
-
      .text {
          margin-bottom: 0px;
      }
@@ -304,16 +302,32 @@
      }
 
      @media screen and (min-width: 0px) and (max-width: 445px) {
-         .body {
-             border-left: 0px;
-             border-right: 0px;
-         }
+         
+        .payment_information {
+            flex-direction: column;
+        }
          .information {
              width: 100%;
              display: block;
              height: auto;
-             padding-left: 10%;
+             padding-left: 7%;
          }
+         
+        .payinfo {
+            margin-left: 1%;
+            margin-right: 1%;
+            margin-top: 5%;
+        }
+        
+        .info {
+            width: 90%;
+            margin-top: 2%;
+        }
+         .card {
+            margin-left: 10%;
+            
+            height:180px;
+        }
          .contacts {
              display: flex;
              flex-direction: column;
@@ -334,44 +348,40 @@
              max-height: 200px;
          }
      }
+     @media screen and (min-width:0px) and (max-width: 517px){
+         .payment_type{
+            display: flex;
+            flex-direction: column;
+         }
+     }
 
-     @media screen and (min-width:0px) and (max-width: 650px) {
-         .body {
-             border-left: 0px;
-             border-right: 0px;
-         }
-         .information {
-             display: block;
-             height: auto;
-             padding-left: 10px;
-         }
-         .company_name {
-             width: 100%;
-             display: flex;
-             flex-direction: row;
-         }
-         .company_information {
-             height: auto;
-             font-size: 18px;
-             padding-bottom: 10px;
-             padding-left: 1%;
-         }
+     @media screen and (min-width:446px) and (max-width: 650px) {
+         .payment_information {
+            flex-direction: column;
+        }
+        .card {
+            height:180px;
+            margin-right: 20%;
+            margin-left: 20%;
+        }
+        .payinfo {
+            margin-left: 1%;
+            margin-right: 1%;
+            margin-top: 5%;
+        }
+        .info {
+            width: 80%;
+            margin-top: 2%;
+        }
          .contacts {
              display: flex;
              flex-direction: column;
-             height: auto;
              padding-right: 15px;
-             font-size: 150%;
-         }
-         .logo {
-             width: 100%;
-             height: auto;
-             max-height: 200px;
          }
      }
 
      @media screen and (min-width:0px) and (max-width:768px) {
-         .body {
+        body {
              border-left: 0px;
              border-right: 0px;
          }
