@@ -110,6 +110,10 @@ a:visited {
 input[type="radio"] {
     display: none;
 }
+label:hover{
+    color: rgb(22, 22, 206);
+    background-color: lightblue;
+}
 
 label {
     cursor: pointer;
@@ -625,8 +629,4 @@ ul li a {
 }
 .action_type_request:checked ~.payment_own {
     display: none;
-}
-
-.without_border {
-    border-bottom: 0px;
 }
