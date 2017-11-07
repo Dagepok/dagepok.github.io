@@ -68,7 +68,10 @@
          max-height: 200px;
          flex: 3;
      }
-
+     .action_type{
+         display: flex;
+         justify-content: space-between;
+     }
      .logo img {
          max-width: 200px;
          max-height: 200px;
@@ -104,9 +107,8 @@
 
      .action_type_button {
          font-weight: bold;
-         font-size: 130%;
+         font-size: 100%;
          margin-top: 1%;
-         font-size: 15px;
          margin-right: 10%;
          padding-left: 10%;
      }
@@ -137,7 +139,7 @@
      }
 
      .payImg {
-         width: 50%;
+         width: 40%;
          margin-left: 60%;
      }
 
@@ -207,7 +209,8 @@
 
      .services {
          display: flex;
-         justify-content: space-around;
+         justify-content: space-between
+         ;
      }
 
      .services div {
@@ -312,11 +315,18 @@
              height: auto;
              padding-left: 7%;
          }
-         
+         .action_type_button {
+            margin-right: 0%;
+            padding-left: 10%;
+        }
         .payinfo {
             margin-left: 1%;
             margin-right: 1%;
             margin-top: 5%;
+        }
+        .payImg {
+            width: 40%;
+            margin-left: 60%;
         }
         
         .info {
@@ -324,7 +334,8 @@
             margin-top: 2%;
         }
          .card {
-            margin-left: 10%;
+            margin-left: auto;
+            margin-right: auto;
             
             height:180px;
         }
@@ -342,6 +353,10 @@
              padding-bottom: 10px;
              padding-left: 1%;
          }
+         .services span {
+            font-size: 80%;
+            margin-top: 5%;
+        }
          .logo {
              width: 100%;
              height: auto;
@@ -358,6 +373,9 @@
      @media screen and (min-width:446px) and (max-width: 650px) {
          .payment_information {
             flex-direction: column;
+        }
+        form{
+            align-items: center;
         }
         .card {
             height:180px;
