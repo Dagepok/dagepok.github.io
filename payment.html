@@ -45,97 +45,106 @@
 					<button class="action_type_button">Запросить платёж</button>
 				</div>
 				<div class="payment_type">
-					<button class="payment_type_button">
-						<img src="images/card.png"> С карты любого банка
-					</button>
-					<button class="payment_type_button">
-						<img src="images/bank.png"> Из своего Интернет-банка
-					</button>
+					<label for="payment_type_any">
+						<img src="images/card.png"> С карты любого банка</label>
+					<label for="payment_type_own">
+						<img src="images/bank.png"> Из своего Интернет-банка</label>
 				</div>
-				<div>
-					<div class="payment_any hidden">
-						<div class="card">
-							<img class="payImg" src="images/paySystem.png" alt="paysystem">
-							<input id="num_card" type="text" placeholder="Номер карты" maxlength="20">
+				<input type="radio" class="payment_type_any" id="payment_type_any" name="payment_type" checked>
+				<input type="radio" class="payment_type_own" id="payment_type_own" name="payment_type">
+				<div class="payment_any">
 
-							<div class="card_wrapper">
-								<input id="Date" type="text" placeholder="MM/YY" maxlength="5">
-								<input id="CVC" type="text" placeholder="CVC" maxlength="3">
-							</div>
+					<div class="card">
+						<img class="payImg" src="images/paySystem.png" alt="paysystem">
+						<input id="num_card" type="text" placeholder="Номер карты" maxlength="20">
 
+						<div class="card_wrapper">
+							<input id="Date" type="text" placeholder="MM/YY" maxlength="5">
+							<input id="CVC" type="text" placeholder="CVC" maxlength="3">
 						</div>
-						<div class="payinfo">
-							<div class="info">
-								<span>Сумма</span>
-								<span>
-									<input type="text">
-								</span>
-							</div>
-							<div class="info">
-								<span>Комментарий</span>
-								<span>
-									<input type="text">
-								</span>
-							</div>
-							<div class="info">
-								<span>
-									Электронная почта
-								</span>
-								<span>
-									<input type="text">
-								</span>
-							</div>
-							<div>
-								<button class="pay_button" type="submit">
-									Заплатить
-								</button>
-							</div>
 
-						</div>
 					</div>
-					<div class="payment_own">
-						<div id="act_description">Сформируйте платёжку и загрузите её в свой банк для подписи</div>
-						<div class="own_payment_info">
-							<div class="info_row" id="inn">
-								<span> ИНН получателя</span>
-								<span>
-									<input type="text" placeholder="">
-								</span>
-							</div>
-							<div class="info_row">
-								<span>БИК</span>
-								<span>
-									<input>
-								</span>
-							</div>
-							<div class="info_row">
-								<span> За что</span>
-								<span>
-									<input type="text">
-								</span>
-							</div>
-							<div class="radio_buttons">
+					<div class="payinfo">
+						<div class="info">
+							<span>Сумма</span>
+							<span>
+								<input type="text">
+							</span>
+						</div>
+						<div class="info">
+							<span>Комментарий</span>
+							<span>
+								<input type="text">
+							</span>
+						</div>
+						<div class="info">
+							<span>
+								Электронная почта
+							</span>
+							<span>
+								<input type="text">
+							</span>
+						</div>
+						<div>
+							<button class="pay_button" type="submit">
+								Заплатить
+							</button>
+						</div>
+
+					</div>
+				</div>
+				
+				<div class="payment_own">
+
+					<div id="act_description">Сформируйте платёжку и загрузите её в свой банк для подписи</div>
+					<div class="own_payment_info">
+						<div class="info_row" id="inn">
+							<span> ИНН получателя</span>
+							<span>
+								<input type="text" placeholder="">
+							</span>
+						</div>
+						<div class="info_row">
+							<span>БИК</span>
+							<span>
+								<input>
+							</span>
+						</div>
+						<div class="info_row">
+							<span> За что</span>
+							<span>
+								<input type="text">
+							</span>
+						</div>
+						<div class="radio_buttons">
+							<span class="nds">
 								<input id="1" type="radio" class="radio" name="radioButton" checked>
 								<label for="1" class="radio_label">НДС 18%</label>
+							</span>
+							<span class="nds">
 								<input id="2" type="radio" class="radio" name="radioButton">
 								<label for="2" "radio_label">НДС 10%</label>
+							</span>
+							<span class="nds">
 								<input id="3" type="radio" class="radio" name="radioButton">
 								<label for="3" class="radio_label">Без НДС</label>
-							</div>
-							<div class="info_row">
-								<span>Сколько</span>
-								<span>
-									<input id="own_sum">
-								</span>
-							</div>
+							</span>
+
 						</div>
-						<div class="own_form_buttons">
-							<button type="submit" id="own_submit">Получить файл для Интернет&nbsp;банка</button>
-							<button type="reset" id="own_reset">Очистить форму</button>
+						<div class="info_row">
+							<span>Сколько</span>
+							<span>
+								<input id="own_sum">
+							</span>
 						</div>
 					</div>
-					<div class="pay_request"></div>
+					<div class="own_form_buttons">
+						<button type="submit" id="own_submit">Получить файл для Интернет&nbsp;банка</button>
+						<button type="reset" id="own_reset">Очистить форму</button>
+					</div>
 				</div>
+				<div class="pay_request"></div>
+
 			</form>
 		</div>
 

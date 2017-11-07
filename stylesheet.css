@@ -90,7 +90,24 @@ a:link,
 a:visited {
     color: rgb(77, 77, 252);
 }
+.payment_type
+{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 2%;
+}
 
+.payment_type label {
+    color: rgb(77, 77, 252);
+}
+
+
+input[type="radio"]{
+    display: none;
+}
+label{
+    cursor: pointer;
+}
 button {
     border: 0px;
     background: inherit;
@@ -107,12 +124,6 @@ button:hover {
     font-size: 100%;
     margin-top: 1%;
     margin-right: 10%;
-}
-
-.payment_type_button {
-    font-size: 15px;
-    margin: 2%;
-    margin-left: 10%;
 }
 
 .payment_any {
@@ -225,9 +236,9 @@ button:hover {
     max-height: 100%;
     text-align: center;
 }
-
-.bold {
-    font-weight: bold;
+.nds{
+    margin-right: 2%;
+    font-size: 100%;
 }
 
 .curse {
@@ -347,13 +358,21 @@ ul li a {
     margin: 2%;
 }
 
-.label {
-    cursor: pointer;
-}
-
 .radio:checked+label {
     color: black;
     font-weight: bold;
+}
+
+.payment_type_own {
+    font-size: 15px;
+    margin: 2%;
+    margin-left: 10%;
+}
+
+.payment_type_any {
+    font-size: 15px;
+    margin: 2%;
+    margin-left: 10%;
 }
 
 #own_sum {
@@ -375,11 +394,12 @@ ul li a {
     color: grey;
     border: 1px solid gray;
     margin-bottom: 4%;
-}
-#own_submit:hover{
-    color:black;
+    border-radius:6%;
 }
 
+#own_submit:hover {
+    color: black;
+}
 
 
 /*  МЕДИА ДЛЯ 445 ПИКСЕЛЕЙ */
@@ -441,6 +461,7 @@ ul li a {
     .radio_buttons {
         margin-left: 0%;
         justify-content: initial;
+        
     }
 }
 
@@ -451,6 +472,7 @@ ul li a {
     .payment_type {
         display: flex;
         flex-direction: column;
+        align-items: center;
     }
     .services {
         flex-direction: column;
@@ -552,4 +574,19 @@ ul li a {
 .border {
     border-radius: 0px 0px 5% 5%;
     border-bottom: 2px solid rgb(156, 156, 156);
+}
+
+.payment_type_any:checked ~ payment_type {
+    color: black;
+}
+
+.payment_type_own:checked+label {
+    color: black;
+}
+
+.payment_type_any:checked ~ .payment_own {
+    display: none;
+}
+.payment_type_own:checked ~ .payment_any {
+    display: none;
 }
