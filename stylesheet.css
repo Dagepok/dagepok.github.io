@@ -165,16 +165,15 @@
 
      .payinfo {
          margin-left: 5%;
-         display: flex;
          flex-direction: column;
          justify-content: space-around;
      }
 
      .pay_button {
-         margin-left: 0px;
          height: 40px;
          background-image: url(images/pay_batton_background.png);
          border: 1px solid gray;
+         margin-left: 40%;         
      }
 
      .info {
@@ -183,7 +182,6 @@
          margin: 4%;
          font-weight: bold;
          width: 100%;
-         margin-top: 0%;
      }
 
      .info span {
@@ -200,6 +198,8 @@
          margin-right: 10%;
          border: 0px;
          border-bottom: 1px solid grey;
+         
+         background: inherit;
      }
 
      .сompany_services {
@@ -372,7 +372,7 @@
              flex-direction: column;
          }
          .services div {
-             width: 100%;
+             width: 104%;
          }
      }
 
@@ -384,6 +384,7 @@
              align-items: center;
          }
          .card {
+             
              height: 180px;
              margin-right: 20%;
              margin-left: 20%;
