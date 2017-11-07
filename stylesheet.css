@@ -71,7 +71,7 @@
 
      .action_type {
          display: flex;
-         justify-content: space-between;
+         justify-content: space-around;
      }
 
      .logo img {
@@ -112,7 +112,6 @@
          font-size: 100%;
          margin-top: 1%;
          margin-right: 10%;
-         padding-left: 10%;
      }
 
      .payment_type_button {
@@ -212,6 +211,7 @@
      .services {
          display: flex;
          justify-content: space-between;
+         align-items: center;
      }
 
      .services div {
@@ -220,6 +220,8 @@
          flex-direction: column;
          justify-content: space-around;
          width: 30%;
+         height: 220px;
+         max-height: 100%;
          text-align: center;
      }
 
@@ -232,8 +234,8 @@
      }
 
      .services img {
-         padding: 5% 15% 5% 15%;
-         width: 70%;
+         padding: 5% 10%;
+         width: 80%;
          height: auto;
      }
 
@@ -257,7 +259,6 @@
      ul {
          list-style-type: none;
          display: flex;
-         flex-wrap: wrap;
          justify-content: center;
      }
 
@@ -352,10 +353,6 @@
              padding-bottom: 10px;
              padding-left: 1%;
          }
-         .services span {
-             /* font-size: 80%;
-            margin-top: 5%; */
-         }
          .logo {
              width: 100%;
              height: auto;
@@ -373,12 +370,16 @@
          }
          .services div {
              width: 104%;
+             height: auto;
          }
      }
 
      @media screen and (min-width:446px) and (max-width: 650px) {
          .payment_information {
              flex-direction: column;
+         }
+         .action_type{
+             padding-left:10%;
          }
          form {
              align-items: center;
