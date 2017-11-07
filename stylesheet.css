@@ -308,7 +308,6 @@ ul li a {
 }
 
 .own_payment_info {
-    display: flex;
     flex-direction: column;
     width: 100%;
 }
@@ -367,6 +366,7 @@ ul li a {
     align-items: baseline;
     margin-bottom: 2%;
     margin-left: 1%;
+    margin-top: 5%;
 }
 
 #own_submit {
@@ -374,10 +374,12 @@ ul li a {
     height: 40px;
     color: grey;
     border: 1px solid gray;
-    margin-bottom: 2%;
+    margin-bottom: 4%;
+}
+#own_submit:hover{
+    color:black;
 }
 
-#own_reset {}
 
 
 /*  МЕДИА ДЛЯ 445 ПИКСЕЛЕЙ */
