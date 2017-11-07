@@ -22,6 +22,7 @@ body {
 }
 
 .company_name {
+    padding-left: 5%;
     display: flex;
     flex-direction: row;
 }
@@ -90,24 +91,30 @@ a:link,
 a:visited {
     color: rgb(77, 77, 252);
 }
-.payment_type
-{
+
+.payment_type {
     display: flex;
-    justify-content: space-evenly;
+    /* justify-content: space-evenly; */
     margin-top: 2%;
+    justify-content: space-around;
 }
 
-.payment_type label {
+.common {
     color: rgb(77, 77, 252);
 }
 
+.black {
+    color: black;
+}
 
-input[type="radio"]{
+input[type="radio"] {
     display: none;
 }
-label{
+
+label {
     cursor: pointer;
 }
+
 button {
     border: 0px;
     background: inherit;
@@ -126,7 +133,7 @@ button:hover {
     margin-right: 10%;
 }
 
-.payment_any {
+.payment {
     margin: 3%;
     display: flex;
     flex-direction: row;
@@ -236,7 +243,8 @@ button:hover {
     max-height: 100%;
     text-align: center;
 }
-.nds{
+
+.nds {
     margin-right: 2%;
     font-size: 100%;
 }
@@ -393,19 +401,26 @@ ul li a {
     height: 40px;
     color: grey;
     border: 1px solid gray;
-    margin-bottom: 4%;
-    border-radius:6%;
+    margin-bottom: 2%;
+    border-radius: 6%;
+    padding: 1%;
 }
 
 #own_submit:hover {
     color: black;
 }
 
+.phone_info {
+    font-size: 9px;
+    align-items: center;
+    color: rgb(77, 77, 252);
+}
+
 
 /*  МЕДИА ДЛЯ 445 ПИКСЕЛЕЙ */
 
 @media screen and (min-width: 0px) and (max-width: 445px) {
-    .payment_any {
+    .payment {
         flex-direction: column;
     }
     .information {
@@ -461,7 +476,9 @@ ul li a {
     .radio_buttons {
         margin-left: 0%;
         justify-content: initial;
-        
+    }
+    #act_description{
+        margin-left: 2%;
     }
 }
 
@@ -496,7 +513,7 @@ ul li a {
 /*  МЕДИА ДЛЯ 650 ПИКСЕЛЕЙ */
 
 @media screen and (min-width:446px) and (max-width: 650px) {
-    .payment_any {
+    .payment {
         flex-direction: column;
     }
     .action_type {
@@ -555,6 +572,9 @@ ul li a {
         margin-bottom: 5%;
         margin-left: 7%;
     }
+    #act_description{
+        margin-left: 10%;
+    }
 }
 
 
@@ -567,6 +587,15 @@ ul li a {
     }
 }
 
+#mail {
+    border-bottom: 0px;
+}
+
+#phone {
+    width: 50%;
+    border-bottom: 0px;
+}
+
 .hidden {
     display: none;
 }
@@ -576,17 +605,28 @@ ul li a {
     border-bottom: 2px solid rgb(156, 156, 156);
 }
 
-.payment_type_any:checked ~ payment_type {
-    color: black;
-}
-
-.payment_type_own:checked+label {
-    color: black;
-}
-
-.payment_type_any:checked ~ .payment_own {
+.payment_type_any:checked~.payment_own {
     display: none;
 }
-.payment_type_own:checked ~ .payment_any {
+.payment_type_any:checked~.pay_request {
     display: none;
+}
+
+.payment_type_own:checked~.payment_any {
+    display: none;
+}
+
+.payment_type_own:checked~.pay_request {
+    display: none;
+}
+
+.action_type_request:checked ~.payment_any {
+    display: none;
+}
+.action_type_request:checked ~.payment_own {
+    display: none;
+}
+
+.without_border {
+    border-bottom: 0px;
 }

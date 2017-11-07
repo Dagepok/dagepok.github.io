@@ -40,62 +40,74 @@
 		</div>
 		<div class="payment_form_any border">
 			<form>
-				<div class="action_type">
-					<button class="action_type_button">Заплатить</button>
-					<button class="action_type_button">Запросить платёж</button>
-				</div>
-				<div class="payment_type">
-					<label for="payment_type_any">
-						<img src="images/card.png"> С карты любого банка</label>
-					<label for="payment_type_own">
-						<img src="images/bank.png"> Из своего Интернет-банка</label>
-				</div>
-				<input type="radio" class="payment_type_any" id="payment_type_any" name="payment_type" checked>
-				<input type="radio" class="payment_type_own" id="payment_type_own" name="payment_type">
-				<div class="payment_any">
-
-					<div class="card">
-						<img class="payImg" src="images/paySystem.png" alt="paysystem">
-						<input id="num_card" type="text" placeholder="Номер карты" maxlength="20">
-
-						<div class="card_wrapper">
-							<input id="Date" type="text" placeholder="MM/YY" maxlength="5">
-							<input id="CVC" type="text" placeholder="CVC" maxlength="3">
-						</div>
-
-					</div>
-					<div class="payinfo">
-						<div class="info">
-							<span>Сумма</span>
-							<span>
-								<input type="text">
-							</span>
-						</div>
-						<div class="info">
-							<span>Комментарий</span>
-							<span>
-								<input type="text">
-							</span>
-						</div>
-						<div class="info">
-							<span>
-								Электронная почта
-							</span>
-							<span>
-								<input type="text">
-							</span>
-						</div>
-						<div>
-							<button class="pay_button" type="submit">
-								Заплатить
-							</button>
-						</div>
-
-					</div>
-				</div>
+				<!-- <input type="radio" class="action_type_pay" id="action_type_pay" name="action_types" checked> -->
+				<input type="radio" class="action_type_request" id="action_type_request" name="payment_types">
+				<input type="radio" class="payment_type_any" id="payment_type_any" name="payment_types" checked>
+				<input type="radio" class="payment_type_own" id="payment_type_own" name="payment_types">
 				
-				<div class="payment_own">
+				<div class="payment_any">
+					<div class="action_type">
+						<label for="payment_type_any" class="black">Заплатить</label>
+						<label for="action_type_request" class="common">Запросить платёж</label>
+					</div>
+					<div class="payment_type">
+						<label for="payment_type_any" class="black">
+							<img src="images/card.png"> С карты любого банка</label>
+						<label for="payment_type_own" class="common">
+							<img src="images/bank.png"> Из своего Интернет-банка</label>
+					</div>
+					<div class="payment">
+						<div class="card">
+							<img class="payImg" src="images/paySystem.png" alt="paysystem">
+							<input id="num_card" type="text" placeholder="Номер карты" maxlength="20">
 
+							<div class="card_wrapper">
+								<input id="Date" type="text" placeholder="MM/YY" maxlength="5">
+								<input id="CVC" type="text" placeholder="CVC" maxlength="3">
+							</div>
+
+						</div>
+						<div class="payinfo">
+							<div class="info">
+								<span>Сумма</span>
+								<span>
+									<input type="text">
+								</span>
+							</div>
+							<div class="info">
+								<span>Комментарий</span>
+								<span>
+									<input type="text">
+								</span>
+							</div>
+							<div class="info">
+								<span>
+									Электронная почта
+								</span>
+								<span>
+									<input type="text">
+								</span>
+							</div>
+							<div>
+								<button class="pay_button" type="submit">
+									Заплатить
+								</button>
+							</div>
+
+						</div>
+					</div>
+				</div>
+				<div class="payment_own">
+					<div class="action_type">
+						<label for="payment_type_any" class="black">Заплатить</label>
+						<label for="action_type_request" class="common">Запросить платёж</label>
+					</div>
+					<div class="payment_type">
+						<label for="payment_type_any" class="common">
+							<img src="images/card.png"> С карты любого банка</label>
+						<label for="payment_type_own" class="black">
+							<img src="images/bank.png"> Из своего Интернет-банка</label>
+					</div>
 					<div id="act_description">Сформируйте платёжку и загрузите её в свой банк для подписи</div>
 					<div class="own_payment_info">
 						<div class="info_row" id="inn">
@@ -143,63 +155,140 @@
 						<button type="reset" id="own_reset">Очистить форму</button>
 					</div>
 				</div>
-				<div class="pay_request"></div>
+				<div class="pay_request">
+					<div class="action_type">
+						<label for="payment_type_any" class="common">Заплатить</label>
+						<label for="action_type_request" class="black">Запросить платёж</label>
+					</div>
+					<div id="act_description">Создайте платёжку,а мы подпишем её у себя в интернет банке</div>
+					<div class="own_payment_info">
+						<div class="info_row" id="inn">
+							<span> ИНН получателя</span>
+							<span>
+								<input type="text" placeholder="">
+							</span>
+						</div>
+						<div class="info_row">
+							<span>БИК</span>
+							<span>
+								<input>
+							</span>
+						</div>
+						<div class="info_row">
+							<span>Номер счёта</span>
+							<span>
+								<input>
+							</span>
+						</div>
+						<div class="info_row">
+							<span> За что</span>
+							<span>
+								<input type="text">
+							</span>
+						</div>
+						<div class="radio_buttons">
+							<span class="nds">
+								<input id="4" type="radio" class="radio" name="radioButton1" checked>
+								<label for="4" class="radio_label">НДС 18%</label>
+							</span>
+							<span class="nds">
+								<input id="5" type="radio" class="radio" name="radioButton1">
+								<label for="5" "radio_label">НДС 10%</label>
+							</span>
+							<span class="nds">
+								<input id="6" type="radio" class="radio" name="radioButton1">
+								<label for="6" class="radio_label">Без НДС</label>
+							</span>
 
-			</form>
+						</div>
+						<div class="info_row">
+							<span>Сколько</span>
+							<span>
+								<input id="own_sum">
+							</span>
+						</div>
+						<div class="info_row">
+							<span>Номер телефона</span>
+							<span>
+								<input id="phone" placeholder="+7">
+							</span>
+						</div>
+						<div class="info_row">
+							<span></span>
+							<span class="phone_info">
+								Оставляя телефон, вы соглашаетесь на обработку персональных данных
+							</span>
+						</div>
+						<!-- <div class="phone_info">Оставляя телефон, вы соглашаетесь на обработку персональных данных</div> -->
+						<div class="info_row">
+							<span>Электронная почта</span>
+							<span>
+								<input id="mail" placeholder="для уведомления об оплате">
+							</span>
+						</div>
+					</div>
+					<div class="own_form_buttons">
+						<button type="submit" id="own_submit">Создать платёж</button>
+						<button type="reset" id="own_reset">Очистить форму</button>
+					</div>
+				</div>
 		</div>
 
-		<div class="сompany_services">
-			<div class="company_name">
-				<H3>О компании ООО&nbsp;"Счастливый&nbsp;Крокодильчик"</H3>
-			</div>
-			<div class="services">
-				<div>
-					<img src="images/lechenie.png" alt="Вылечим">
-					<span class="bold"> Вылечим</span>
-					<span class="curse"> от 1000 рублей</span>
-				</div>
-				<div>
-					<img src="images/uhod.jpg" alt="Поухаживаем">
-					<span class="bold"> Приведем в порядок</span>
-					<span class="curse">от 500 рублей</span>
-				</div>
-				<div>
-					<img src="images/vibor.jpg" alt="Продадим">
-					<span class="bold">Поможем выбрать питомца</span>
-					<span class="curse">от 1000 рублей</span>
-				</div>
-			</div>
-			<div class="description">
+		</form>
+	</div>
 
-				<p class="text">Терапия - область медицины, которая содержит учение о внутренних болезнях и их лечении консервативными методами. На приеме
-					очень важно чтобы вы рассказали все, что беспокоит вашего питомца, а так же сведения о его режиме питания, о вакцинации
-					и ранее перенесенных заболеваниях. Далее проводится клинический осмотр животного. В большинстве случаев для постановки
-					точного диагноза и назначения правильного лечения требуются дополнительные диагностические исследования. На основании
-					всех полученных сведений ваш лечащий врач поставит диагноз, подберет оптимальную схему лечения и при необходимости направит
-					на консультацию к узкому специалисту.</p>
-				<button class="full_text_button">Посмотреть полностью</button>
+	<div class="сompany_services">
+		<div class="company_name">
+			<H3>О компании ООО&nbsp;"Счастливый&nbsp;Крокодильчик"</H3>
+		</div>
+		<div class="services">
+			<div>
+				<img src="images/lechenie.png" alt="Вылечим">
+				<span class="bold"> Вылечим</span>
+				<span class="curse"> от 1000 рублей</span>
+			</div>
+			<div>
+				<img src="images/uhod.jpg" alt="Поухаживаем">
+				<span class="bold"> Приведем в порядок</span>
+				<span class="curse">от 500 рублей</span>
+			</div>
+			<div>
+				<img src="images/vibor.jpg" alt="Продадим">
+				<span class="bold">Поможем выбрать питомца</span>
+				<span class="curse">от 1000 рублей</span>
 			</div>
 		</div>
+		<div class="description">
 
-		<div id="footer">
-			<ul>
-				<li class="vk social">
-					<a href="http://vk.com/dagepok"></a>
-				</li>
-				<li class="facebook social">
-					<a href="http://fb.com/"></a>
-				</li>
-				<li class="twitter social">
-					<a href="http://twitter.com/"></a>
-				</li>
-				<li class="google social">
-					<a href="https://plus.google.com/u/0/107165396319654678282"></a>
-				</li>
-				<li class="telegram social">
-					<a href="https://t.me/Dagepok/"></a>
-				</li>
-			</ul>
+			<p class="text">Терапия - область медицины, которая содержит учение о внутренних болезнях и их лечении консервативными методами. На приеме
+				очень важно чтобы вы рассказали все, что беспокоит вашего питомца, а так же сведения о его режиме питания, о вакцинации
+				и ранее перенесенных заболеваниях. Далее проводится клинический осмотр животного. В большинстве случаев для постановки
+				точного диагноза и назначения правильного лечения требуются дополнительные диагностические исследования. На основании
+				всех полученных сведений ваш лечащий врач поставит диагноз, подберет оптимальную схему лечения и при необходимости направит
+				на консультацию к узкому специалисту.</p>
+			<button class="full_text_button">Посмотреть полностью</button>
 		</div>
+	</div>
+
+	<div id="footer">
+		<ul>
+			<li class="vk social">
+				<a href="http://vk.com/dagepok"></a>
+			</li>
+			<li class="facebook social">
+				<a href="http://fb.com/"></a>
+			</li>
+			<li class="twitter social">
+				<a href="http://twitter.com/"></a>
+			</li>
+			<li class="google social">
+				<a href="https://plus.google.com/u/0/107165396319654678282"></a>
+			</li>
+			<li class="telegram social">
+				<a href="https://t.me/Dagepok/"></a>
+			</li>
+		</ul>
+	</div>
 	</div>
 </body>
 
