@@ -209,7 +209,6 @@ button:hover {
 .info input {
     width: 100%;
     margin-left: 10%;
-    margin-right: 10%;
     border: 0px;
     border-bottom: 1px solid grey;
     background: inherit;
@@ -495,11 +494,14 @@ ul li a {
         flex-direction: column;
         align-items: center;
     }
+    .card{
+    	margin-left: 13%;
+    }
     .services {
         flex-direction: column;
     }
     .services div {
-        width: 104%;
+        width: 100%;
         height: auto;
     }
     .info {
@@ -517,6 +519,9 @@ ul li a {
 /*  МЕДИА ДЛЯ 650 ПИКСЕЛЕЙ */
 
 @media screen and (min-width:446px) and (max-width: 650px) {
+	.information{
+		width: 50%;
+	}
     .payment {
         flex-direction: column;
     }
@@ -528,7 +533,6 @@ ul li a {
     }
     .card {
         height: 180px;
-        margin-right: 20%;
         margin-left: 20%;
     }
     .contacts {
