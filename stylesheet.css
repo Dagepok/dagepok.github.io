@@ -1,7 +1,7 @@
 * {
-    font-family: "Helvetica, Arial, Verdana, Geneva, Tahoma, sans-serif";
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     transition: all 0.4s;
-    font-size: 18px;
+    font-size: 17px;
 }
 
 body {
@@ -29,7 +29,6 @@ body {
 
 .company_information {
     display: flex;
-    height: auto;
     font-size: 18px;
     padding-bottom: 10px;
     padding-left: 1%;
@@ -43,14 +42,12 @@ body {
 }
 
 .contacts {
-    height: auto;
     padding-right: 15px;
     font-size: 150%;
 }
 
 .contacts div {
     display: inline-block;
-    height: auto;
     padding-left: 10px;
     margin-bottom: 5%;
 }
@@ -79,7 +76,7 @@ body {
 }
 
 .payment {
-    position: relative;
+    
 }
 
 a {
@@ -278,6 +275,17 @@ button:hover {
     background-color: inherit;
 }
 
+.short_text_button {
+    display: none;
+    
+    margin-top: 0;
+    margin-bottom: 3%;
+}
+
+.short_text_button:hover {
+    background-color: inherit;
+}
+
 ul {
     list-style-type: none;
     display: flex;
@@ -361,7 +369,10 @@ ul li a {
 .radio {
     visibility: hidden;
 }
-
+.description{
+    padding-left: 2%; 
+    padding-right: 1%;
+}
 #act_description {
     font-weight: bold;
     font-size: 80%;
@@ -385,7 +396,7 @@ ul li a {
     margin-left: 10%;
 }
 
-#own_sum {
+.own_sum {
     width: 50%;
 }
 
@@ -398,17 +409,17 @@ ul li a {
     margin-top: 5%;
 }
 
-#own_submit {
+.own_submit {
     background-image: url(images/pay_batton_background.png);
     height: 40px;
-    color: grey;
+    color: rgb(22, 22, 206);
     border: 1px solid gray;
     margin-bottom: 2%;
     border-radius: 6%;
     padding: 1%;
 }
 
-#own_submit:hover {
+.own_submit:hover {
     color: black;
 }
 
@@ -418,6 +429,9 @@ ul li a {
     color: rgb(77, 77, 252);
 }
 
+#fullText{
+    display: none;
+}
 
 /*  МЕДИА ДЛЯ 445 ПИКСЕЛЕЙ */
 
@@ -512,6 +526,8 @@ ul li a {
     .info_row {
         display: block;
     }
+
+   
 }
 
 
@@ -595,7 +611,7 @@ ul li a {
 }
 
 #mail {
-    border-bottom: 0px;
+    border-bottom: 1px;
 }
 
 #phone {
@@ -632,4 +648,17 @@ ul li a {
 }
 .action_type_request:checked ~.payment_own {
     display: none;
+}
+#pay:disabled{
+    color: grey;
+}
+#get_file_submit:disabled{
+    color: grey;
+}
+#request_submit:disabled{
+    color: grey;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
 }

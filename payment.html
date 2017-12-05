@@ -2,8 +2,10 @@
 <html>
 
 <head>
+	<script src="scripts/jquery.js" type="text/javascript"></script>
+	<script src="scripts/script.js" type="text/javascript"></script>
+
 	<meta charset="utf-8 ">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="stylesheet.css">
 	<title>Расчёт</title>
 </head>
@@ -39,31 +41,30 @@
 
 		</div>
 		<div class="payment_form_any border">
-			<form>
-				<!-- <input type="radio" class="action_type_pay" id="action_type_pay" name="action_types" checked> -->
+			<form id="form">
 				<input type="radio" class="action_type_request" id="action_type_request" name="payment_types">
 				<input type="radio" class="payment_type_any" id="payment_type_any" name="payment_types" checked>
 				<input type="radio" class="payment_type_own" id="payment_type_own" name="payment_types">
-				
+
 				<div class="payment_any">
 					<div class="action_type">
-						<label for="payment_type_any" class="black">Заплатить</label>
-						<label for="action_type_request" class="common">Запросить платёж</label>
+						<label for="payment_type_any" class="black click">Заплатить</label>
+						<label for="action_type_request" class="common click">Запросить платёж</label>
 					</div>
 					<div class="payment_type">
-						<label for="payment_type_any" class="black">
+						<label for="payment_type_any" class="black click">
 							<img src="images/card.png"> С карты любого банка</label>
-						<label for="payment_type_own" class="common">
+						<label for="payment_type_own" class="common click">
 							<img src="images/bank.png"> Из своего Интернет-банка</label>
 					</div>
 					<div class="payment">
 						<div class="card">
 							<img class="payImg" src="images/paySystem.png" alt="paysystem">
-							<input id="num_card" type="text" placeholder="Номер карты" maxlength="20">
+							<input id="num_card" class="numeric" type="text" placeholder="Номер карты" maxlength="16" onkeyup="checkPaySubmit()">
 
 							<div class="card_wrapper">
-								<input id="Date" type="text" placeholder="MM/YY" maxlength="5">
-								<input id="CVC" type="text" placeholder="CVC" maxlength="3">
+								<input id="Date" type="text" class="numeric" placeholder="MM/YY" maxlength="5" onkeydown="checkDate(event)" onkeyup="checkPaySubmit()">
+								<input id="cvc" type="text"  class="numeric" placeholder="CVC" maxlength="3" onkeyup="checkPaySubmit()">
 							</div>
 
 						</div>
@@ -71,13 +72,13 @@
 							<div class="info">
 								<span>Сумма</span>
 								<span>
-									<input type="text">
+									<input id="sum" class="sum" type="number"   onkeyup="checkPaySubmit()">
 								</span>
 							</div>
 							<div class="info">
 								<span>Комментарий</span>
 								<span>
-									<input type="text">
+									<input type="text" maxlength="150">
 								</span>
 							</div>
 							<div class="info">
@@ -85,11 +86,11 @@
 									Электронная почта
 								</span>
 								<span>
-									<input type="text">
+									<input type="email" onkeyup="checkPaySubmit()">
 								</span>
 							</div>
 							<div>
-								<button class="pay_button" type="submit">
+								<button id="pay" class="pay_button" type="submit" disabled>
 									Заплатить
 								</button>
 							</div>
@@ -99,27 +100,27 @@
 				</div>
 				<div class="payment_own">
 					<div class="action_type">
-						<label for="payment_type_any" class="black">Заплатить</label>
-						<label for="action_type_request" class="common">Запросить платёж</label>
+						<label for="payment_type_any" class="black click">Заплатить</label>
+						<label for="action_type_request" class="common click">Запросить платёж</label>
 					</div>
 					<div class="payment_type">
-						<label for="payment_type_any" class="common">
+						<label for="payment_type_any" class="common click">
 							<img src="images/card.png"> С карты любого банка</label>
-						<label for="payment_type_own" class="black">
+						<label for="payment_type_own" class="black click">
 							<img src="images/bank.png"> Из своего Интернет-банка</label>
 					</div>
 					<div id="act_description">Сформируйте платёжку и загрузите её в свой банк для подписи</div>
 					<div class="own_payment_info">
-						<div class="info_row" id="inn">
+						<div class="info_row">
 							<span> ИНН получателя</span>
 							<span>
-								<input type="text" placeholder="">
+								<input id="getFileInn" class="inn numeric" type="text" maxlength="12" onkeyup="checkGetFileSubmit()">
 							</span>
 						</div>
 						<div class="info_row">
 							<span>БИК</span>
 							<span>
-								<input>
+								<input id="getFileBik" class="bik numeric" maxlength="9" onkeyup="checkGetFileSubmit()">
 							</span>
 						</div>
 						<div class="info_row">
@@ -146,38 +147,39 @@
 						<div class="info_row">
 							<span>Сколько</span>
 							<span>
-								<input id="own_sum">
+								<input id="getFileSum" class="sum own_sum" type="number"  onkeyup="checkGetFileSubmit()">
 							</span>
 						</div>
 					</div>
 					<div class="own_form_buttons">
-						<button type="submit" id="own_submit">Получить файл для Интернет&nbsp;банка</button>
-						<button type="reset" id="own_reset">Очистить форму</button>
+						<button type="submit" id="get_file_submit" class="own_submit" disabled>
+							Получить файл для Интернет&nbsp;банка</button>
+						<button type="text" id="own_reset">Очистить форму</button>
 					</div>
 				</div>
 				<div class="pay_request">
 					<div class="action_type">
-						<label for="payment_type_any" class="common">Заплатить</label>
-						<label for="action_type_request" class="black">Запросить платёж</label>
+						<label for="payment_type_any" class="common click">Заплатить</label>
+						<label for="action_type_request" class="black click">Запросить платёж</label>
 					</div>
 					<div id="act_description">Создайте платёжку,а мы подпишем её у себя в интернет банке</div>
 					<div class="own_payment_info">
-						<div class="info_row" id="inn">
+						<div class="info_row">
 							<span> ИНН получателя</span>
 							<span>
-								<input type="text" placeholder="">
+								<input id="requestInn" class="inn numeric" type="text" maxlength="12" onkeyup="checkRequestSubmit()">
 							</span>
 						</div>
 						<div class="info_row">
 							<span>БИК</span>
 							<span>
-								<input>
+								<input id="requestBik" class="bik numeric" maxlength="9" onkeyup="checkRequestSubmit()">
 							</span>
 						</div>
 						<div class="info_row">
 							<span>Номер счёта</span>
 							<span>
-								<input>
+								<input id="schet" class="numeric" maxlength="20" onkeyup="checkRequestSubmit()">
 							</span>
 						</div>
 						<div class="info_row">
@@ -204,13 +206,13 @@
 						<div class="info_row">
 							<span>Сколько</span>
 							<span>
-								<input id="own_sum">
+								<input id="requestSum"class="sum own_sum" type="number"   onkeyup="checkRequestSubmit()">
 							</span>
 						</div>
 						<div class="info_row">
 							<span>Номер телефона</span>
 							<span>
-								<input id="phone" placeholder="+7">
+								<input id="phone" class="numeric" placeholder="" value="+7" maxlength="12" >
 							</span>
 						</div>
 						<div class="info_row">
@@ -223,12 +225,12 @@
 						<div class="info_row">
 							<span>Электронная почта</span>
 							<span>
-								<input id="mail" placeholder="для уведомления об оплате">
+								<input id="mail" type="email" placeholder="для уведомления об оплате">
 							</span>
 						</div>
 					</div>
 					<div class="own_form_buttons">
-						<button type="submit" id="own_submit">Создать платёж</button>
+						<button type="submit" id ="request_submit" class="own_submit" disabled>Создать платёж</button>
 						<button type="reset" id="own_reset">Очистить форму</button>
 					</div>
 				</div>
@@ -260,13 +262,17 @@
 		</div>
 		<div class="description">
 
-			<p class="text">Терапия - область медицины, которая содержит учение о внутренних болезнях и их лечении консервативными методами. На приеме
+			<p id="fullText" class="text">Терапия - область медицины, которая содержит учение о внутренних болезнях и их лечении консервативными методами. На приеме
 				очень важно чтобы вы рассказали все, что беспокоит вашего питомца, а так же сведения о его режиме питания, о вакцинации
 				и ранее перенесенных заболеваниях. Далее проводится клинический осмотр животного. В большинстве случаев для постановки
 				точного диагноза и назначения правильного лечения требуются дополнительные диагностические исследования. На основании
 				всех полученных сведений ваш лечащий врач поставит диагноз, подберет оптимальную схему лечения и при необходимости направит
 				на консультацию к узкому специалисту.</p>
+			<p id="shortText" class="text">Терапия - область медицины, которая содержит учение о внутренних болезнях и их лечении консервативными методами. На приеме
+				очень важно чтобы вы рассказали все, что беспокоит вашего питомца, а так же сведения о его режиме питания, о вакцинации
+				и ранее перенесенных заболеваниях...</p>
 			<button class="full_text_button">Посмотреть полностью</button>
+			<button class="short_text_button">Скрыть</button>
 		</div>
 	</div>
 
